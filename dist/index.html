@@ -802,14 +802,6 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
         top: 100%;
       }
 
-      .left-\[90\%\] {
-        left: 90%;
-      }
-
-      .left-\[95\%\] {
-        left: 95%;
-      }
-
       .z-10 {
         z-index: 10;
       }
@@ -1292,19 +1284,19 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
         border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
       }
 
-      .border-primary {
-        --tw-border-opacity: 1;
-        border-color: rgb(37 164 182 / var(--tw-border-opacity, 1));
-      }
-
       .border-light-grey {
         --tw-border-opacity: 1;
         border-color: rgb(232 231 235 / var(--tw-border-opacity, 1));
       }
 
+      .border-primary {
+        --tw-border-opacity: 1;
+        border-color: rgb(255 208 112 / var(--tw-border-opacity, 1));
+      }
+
       .bg-primary {
         --tw-bg-opacity: 1;
-        background-color: rgb(37 164 182 / var(--tw-bg-opacity, 1));
+        background-color: rgb(255 208 112 / var(--tw-bg-opacity, 1));
       }
 
       .bg-white {
@@ -1462,9 +1454,14 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
         color: rgb(81 89 108 / var(--tw-text-opacity, 1));
       }
 
+      .text-green {
+        --tw-text-opacity: 1;
+        color: rgb(69 160 148 / var(--tw-text-opacity, 1));
+      }
+
       .text-primary {
         --tw-text-opacity: 1;
-        color: rgb(37 164 182 / var(--tw-text-opacity, 1));
+        color: rgb(255 208 112 / var(--tw-text-opacity, 1));
       }
 
       .text-white {
@@ -1836,10 +1833,6 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
       }
 
       @media (max-width: 599px) {
-        .max-sm\:left-\[94\%\] {
-          left: 94%;
-        }
-
         .max-sm\:-mx-\[15px\] {
           margin-left: -15px;
           margin-right: -15px;
@@ -1896,8 +1889,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
         --font-inter: "Inter", sans-serif;
         --black: #000000;
         --white: #ffffff;
-        --primary: #25a4b6;
-        --primary-hover: #1698aa;
+        --primary: #ffd070;
+        --primary-hover: #eeac2a;
         --grey-200: #e8e7eb;
         --grey-300: #8b8899;
         --grey-400: #4d4d4d;
@@ -1981,7 +1974,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
         background-color: var(--white);
       }
 
-      .header.hovered::after {
+      .header.active::after {
         display: block;
       }
 
@@ -2088,11 +2081,6 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
       .menu__link.active {
         font-weight: 700;
         text-decoration: underline;
-      }
-
-      .menu__item:hover .submenu {
-        display: flex;
-        justify-content: center;
       }
 
       .header .submenu.active {
@@ -2583,6 +2571,14 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
         .burger {
           display: block;
         }
+
+        .header.active::after {
+          display: none;
+        }
+
+        .header__mobile.active {
+          display: block;
+        }
       }
 
       @media screen and (max-width: 767px) {
@@ -2879,7 +2875,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
             href="/">
             <img class="h-full object-none" src="assets/logo.svg" alt="Logo" />
           </a>
-          <button>
+          <button class="modal_close">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -4344,8 +4340,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                       </ul>
                     </div>
                   </a>
-                </div >
-                <div  class="swiper-slide">
+                </div>
+                <div class="swiper-slide">
                   <a class="flex gap-x-[30px] max-md:flex-col" href="/">
                     <div class="max-md:mb-2.5">
                       <div
@@ -4387,8 +4383,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                       </ul>
                     </div>
                   </a>
-                </div >
-                <div  class="swiper-slide">
+                </div>
+                <div class="swiper-slide">
                   <a class="flex gap-x-[30px] max-md:flex-col" href="/">
                     <div class="max-md:mb-2.5">
                       <div
@@ -4430,8 +4426,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                       </ul>
                     </div>
                   </a>
-                </div >
-                <div  class="swiper-slide">
+                </div>
+                <div class="swiper-slide">
                   <a class="flex gap-x-[30px] max-md:flex-col" href="/">
                     <div class="new-author max-md:mb-2.5">
                       <div
@@ -4473,8 +4469,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                       </ul>
                     </div>
                   </a>
-                </div >
-                <div  class="swiper-slide">
+                </div>
+                <div class="swiper-slide">
                   <a class="flex gap-x-[30px] max-md:flex-col" href="/">
                     <div class="max-md:mb-2.5">
                       <div
@@ -4516,8 +4512,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                       </ul>
                     </div>
                   </a>
-                </div >
-                <div  class="swiper-slide">
+                </div>
+                <div class="swiper-slide">
                   <a class="flex gap-x-[30px] max-md:flex-col" href="/">
                     <div class="max-md:mb-2.5">
                       <div
@@ -4559,8 +4555,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                       </ul>
                     </div>
                   </a>
-                </div >
-                <div  class="swiper-slide">
+                </div>
+                <div class="swiper-slide">
                   <a class="flex gap-x-[30px] max-md:flex-col" href="/">
                     <div class="new-author max-md:mb-2.5">
                       <div
@@ -4602,8 +4598,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                       </ul>
                     </div>
                   </a>
-                </div >
-                <div  class="swiper-slide">
+                </div>
+                <div class="swiper-slide">
                   <a class="flex gap-x-[30px] max-md:flex-col" href="/">
                     <div class="max-md:mb-2.5">
                       <div
@@ -4645,8 +4641,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                       </ul>
                     </div>
                   </a>
-                </div >
-                <div  class="swiper-slide">
+                </div>
+                <div class="swiper-slide">
                   <a class="flex gap-x-[30px] max-md:flex-col" href="/">
                     <div class="max-md:mb-2.5">
                       <div
@@ -4688,7 +4684,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                       </ul>
                     </div>
                   </a>
-                </div >
+                </div>
               </div>
             </div>
             <a
@@ -7780,7 +7776,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                     fill="none">
                     <path
                       d="M12.5 5.05165L7.5 9.77387L12.5 14.4961"
-                      stroke="#25A4B6"
+                      stroke="#ffd070"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round" />
@@ -7806,7 +7802,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                     fill="none">
                     <path
                       d="M7.5 14.503L12.5 9.78082L7.5 5.05859"
-                      stroke="#25A4B6"
+                      stroke="#ffd070"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round" />
@@ -8516,7 +8512,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
       const mapObject = L.map("map", {
         center: [latitude ? latitude : -0.11, longitude ? longitude : 51.5],
-        zoom: 10,
+        zoom: 13,
         zoomControl: false,
         scrollWheelZoom: false,
         dragging: !L.Browser.mobile,
@@ -8524,7 +8520,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
       const pinIcon = `
         <svg xmlns="http://www.w3.org/2000/svg" width="45" height="47" viewBox="0 0 45 47" fill="none">
-          <path d="M22.875 1.42578C18.4013 1.43185 14.1125 3.25615 10.9491 6.49863C7.78572 9.7411 6.00593 14.1371 6 18.7227C6 31.9043 21.7852 44.0193 22.4602 44.5238C22.5792 44.6173 22.725 44.668 22.875 44.668C23.025 44.668 23.1708 44.6173 23.2898 44.5238C23.9648 44.0193 39.75 31.9043 39.75 18.7227C39.7441 14.1371 37.9643 9.7411 34.8009 6.49862C31.6375 3.25614 27.3487 1.43185 22.875 1.42578Z" fill="#25A4B6"/>
+          <path d="M22.875 1.42578C18.4013 1.43185 14.1125 3.25615 10.9491 6.49863C7.78572 9.7411 6.00593 14.1371 6 18.7227C6 31.9043 21.7852 44.0193 22.4602 44.5238C22.5792 44.6173 22.725 44.668 22.875 44.668C23.025 44.668 23.1708 44.6173 23.2898 44.5238C23.9648 44.0193 39.75 31.9043 39.75 18.7227C39.7441 14.1371 37.9643 9.7411 34.8009 6.49862C31.6375 3.25614 27.3487 1.43185 22.875 1.42578Z" fill="#ffd070"/>
           <path d="M17.9443 25.4849C19.4038 26.4844 21.1197 27.018 22.875 27.018C25.2282 27.0161 27.4845 26.057 29.1485 24.3514C30.8125 22.6459 31.7481 20.3331 31.75 17.9211C31.75 16.1219 31.2295 14.3631 30.2543 12.8671C29.2791 11.3712 27.893 10.2052 26.2713 9.51668C24.6496 8.82816 22.8652 8.64801 21.1436 8.99902C19.422 9.35002 17.8406 10.2164 16.5994 11.4886C15.3582 12.7609 14.513 14.3818 14.1705 16.1464C13.8281 17.911 14.0038 19.7401 14.6756 21.4023C15.3473 23.0646 16.4848 24.4853 17.9443 25.4849Z" fill="white"/>
         </svg>
       `;
@@ -8538,7 +8534,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
         `,
         iconSize: [46, 46],
         iconAnchor: [46, 46],
-        popupAnchor: [-22, -40],
+        popupAnchor: [-22, 0],
       });
 
       const popupContent = [{}];
@@ -8582,7 +8578,6 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
           mapObject
         );
       }
-
       function addPins(pins, map = mapObject, pinIcon = null) {
         if (!map || !pins || pins.length === 0) return false;
 
@@ -8592,6 +8587,14 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
             pinIcon && { icon: pinIcon }
           ).addTo(map);
 
+          if (pin.popupContent) {
+            const popup = createPopupContent(
+              pin.popupContent.title,
+              pin.popupContent.text
+            );
+            marker.bindPopup(popup);
+          }
+
           marker.on("mouseover", function () {
             marker.openPopup();
           });
@@ -8599,16 +8602,6 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
           marker.on("click", function () {
             marker.openPopup();
           });
-
-          marker.on("mouseout", function () {
-            marker.closePopup();
-          });
-
-          if (pin.popupContent) {
-            marker.bindPopup(
-              createPopupContent(pin.popupContent.title, pin.popupContent.text)
-            );
-          }
         });
       }
 
@@ -8836,108 +8829,39 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
       document.addEventListener("DOMContentLoaded", () => {
         const header = document.querySelector(".header");
         const headerMobile = document.querySelector(".header__mobile");
-        const headerMenuItems = document.querySelectorAll(".menu__item");
         const activeSubmenuLink = header?.querySelector(".submenu .menu__link");
-        const submenus = header?.querySelectorAll(".submenu");
-        let isDesktop = window.innerWidth > 1199;
         const burger = document.querySelector(".burger");
+        const closeMobileMenuBtn = document.querySelector(
+          ".header__mobile .modal_close"
+        );
+        let isDesktop = window.innerWidth > 1199;
 
-        burger.addEventListener("click", () => {});
-
-        const checkIsDesktop = () => window.innerWidth > 1199;
-
-        const setHovered = () => {
-          if (!header.classList.contains("hovered")) {
-            header.classList.add("hovered");
-          }
-        };
-
-        const unsetHovered = () => {
-          header.classList.remove("hovered");
-        };
-
-        const resetSubmenus = () => {
-          submenus?.forEach((menu) => menu.classList.remove("active"));
-        };
-
-        const restoreActiveSubmenu = () => {
-          if (activeSubmenuLink) {
-            setHovered();
-            activeSubmenuLink.closest(".submenu").classList.add("active");
-          }
-        };
-
-        const initDesktopMenu = () => {
-          restoreActiveSubmenu();
-
-          headerMenuItems.forEach((el) => {
-            const submenu = el.querySelector(".submenu");
-
-            if (submenu) {
-              const activateCurrentSubmenu = () => {
-                resetSubmenus();
-                submenu.classList.add("active");
-                setHovered();
-              };
-
-              const handleMouseLeave = (e) => {
-                if (!el.contains(e.relatedTarget)) {
-                  resetSubmenus();
-                  unsetHovered();
-                  restoreActiveSubmenu();
-                }
-              };
-
-              el.addEventListener("mouseenter", activateCurrentSubmenu);
-              submenu.addEventListener("mouseenter", activateCurrentSubmenu);
-
-              el.addEventListener("mouseleave", handleMouseLeave);
-              submenu.addEventListener("mouseleave", handleMouseLeave);
-            }
-          });
-
-          header?.addEventListener("mouseleave", () => {
-            resetSubmenus();
-            unsetHovered();
-            restoreActiveSubmenu();
-          });
-        };
-
-        const destroyDesktopMenu = () => {
-          resetSubmenus();
-          unsetHovered();
-
-          headerMenuItems.forEach((el) => {
-            const submenu = el.querySelector(".submenu");
-            if (submenu) {
-              el.replaceWith(el.cloneNode(true));
-            }
-          });
-
-          header?.replaceWith(header.cloneNode(true));
-        };
-
-        const handleResize = () => {
-          const shouldBeDesktop = checkIsDesktop();
-          if (shouldBeDesktop !== isDesktop) {
-            isDesktop = shouldBeDesktop;
-            if (isDesktop) {
-              initDesktopMenu();
-            } else {
-              destroyDesktopMenu();
-            }
-          } else if (isDesktop) {
-            restoreActiveSubmenu();
-          }
-        };
-
-        if (isDesktop) {
-          initDesktopMenu();
-        } else {
-          destroyDesktopMenu();
+        if (activeSubmenuLink) {
+          header.classList.add("active");
+          activeSubmenuLink.closest(".submenu").classList.add("active");
         }
 
-        window.addEventListener("resize", handleResize);
+        burger.addEventListener("click", () => {
+          body.classList.add("scroll_disabled");
+          headerMobile.classList.add("active");
+        });
+
+        closeMobileMenuBtn.addEventListener("click", () => {
+          body.classList.remove("scroll_disabled");
+          headerMobile.classList.remove("active");
+        });
+
+        window.addEventListener("resize", () => {
+          isDesktop = window.innerWidth > 1199;
+
+          if (isDesktop) {
+            body.classList.remove("scroll_disabled");
+          } else {
+            if (headerMobile.classList.contains("active")) {
+              body.classList.add("scroll_disabled");
+            }
+          }
+        });
       });
     </script>
   </body>
